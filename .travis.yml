@@ -26,6 +26,8 @@ install:
   # grab latest embedpy
   - if [[ "x$QLIC_KC" != "x" ]]; then
       echo -n $QLIC_KC |base64 --decode > q/kc.lic;
+      conda install -c anaconda gensim;
+      conda install -c naught101 sobol_seq;
       pip -q install -r requirements.txt;
 
     fi
@@ -41,8 +43,6 @@ script:
 - echo "Packaged as automl_$TRAVIS_OS_NAME-$TRAVIS_BRANCH.zip"
 -  if [[ "x$QLIC_KC" != "x" ]]; then
     curl -fsSL -o test.q https://github.com/KxSystems/embedpy/raw/master/test.q;
-    pip install gensim;
-    pip install sobol-seq;
     q test.q -q;
 
   else
