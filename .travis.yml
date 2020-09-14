@@ -29,6 +29,7 @@ install:
       pip -q install -r requirements.txt;
       pip install gensim==3.8.1;
       pip install --upgrade urllib3==1.25.9;
+      pip install ssl;
 
     fi
 beforescript:
