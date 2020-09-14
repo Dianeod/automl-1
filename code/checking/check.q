@@ -15,7 +15,7 @@ i.loadtorch:{
     [-1"Requirements for PyTorch models not satisfied. Torch must be installed. PyTorch models will be excluded from model evaluation.";]]}
 
 i.loadnlp:{
-  @[{.p.import[x]};`gensim;{err}];
+  @[{.p.import[x]};`gensim;{[err]err}];
   $[0N!(0~checkimport[3]);
    .nlp.loadfile`:init.q;
    [-1"Requirements for NLP models are not satisfied. gensim must be installed. NLP module will not be available.";]]}
