@@ -16,7 +16,7 @@ i.loadtorch:{
 
 i.loadnlp:{
   @[{.p.import[x]};`gensim;{err}];
-  $[0N!(0~checkimport[3])];
+  $[0N!(0~checkimport[3]);
    .nlp.loadfile`:init.q;
    [-1"Requirements for NLP models are not satisfied. gensim must be installed. NLP module will not be available.";]]}
 
