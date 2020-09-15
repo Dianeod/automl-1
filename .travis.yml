@@ -27,8 +27,7 @@ install:
   - if [[ "x$QLIC_KC" != "x" ]]; then
       echo -n $QLIC_KC |base64 --decode > q/kc.lic;
       pip -q install -r requirements.txt;
-      pip install --upgrade pip;
-      pip install gensim;
+      conda install -c conda-forge gensim;
       pip install beautifulsoup4;
       pip install sobol-seq;
 
