@@ -1,4 +1,4 @@
-curl -fsSOJL %W64%
+wget --user-agent Mozilla/5.0 %W64%
 mkdir q
 7z x w64.zip -oq
 echo|set /P =%QLIC_KC% >q\kc.lic.enc
