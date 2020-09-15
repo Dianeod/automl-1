@@ -15,7 +15,6 @@ install:
     fi
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
-  - export PATH="$HOME/miniconda/Library/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
@@ -28,7 +27,7 @@ install:
   - if [[ "x$QLIC_KC" != "x" ]]; then
       echo -n $QLIC_KC |base64 --decode > q/kc.lic;
       pip -q install -r requirements.txt;
-      pip install --upgrade pip;
+      sudo apt-get install -y libssl-dev;
       pip install gensim;
       pip install beautifulsoup4;
       pip install sobol-seq;
