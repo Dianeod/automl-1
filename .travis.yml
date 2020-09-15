@@ -27,9 +27,8 @@ install:
   - if [[ "x$QLIC_KC" != "x" ]]; then
       echo -n $QLIC_KC |base64 --decode > q/kc.lic;
       pip -q install -r requirements.txt;
-      pip install gensim==3.8.1;
+      pip install --upgrade gensim;
       pip install sobol-seq;
-      pip install --upgrade pip;
 
     fi
 beforescript:
