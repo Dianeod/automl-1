@@ -63,13 +63,13 @@ $[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;fresh];};freshtab1;{[err]err;0b}];
 $[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;fresh];};freshtab1;{[err]err;0b}];1b;0b]
 $[(::)~@[{.automl.run[x;tgt_mul;`fresh;`class;fresh];};freshtab1;{[err]err;0b}];1b;0b]
 
-$[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;rdm_dict];};freshtab1;{[err]err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;rdm_dict];};freshtab1;{[err]err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_mul;`fresh;`class;rdm_dict];};freshtab1;{[err]err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;rdm_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;rdm_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_mul;`fresh;`class;rdm_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
 
-$[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;sbl_dict];};freshtab1;{[err]err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;sbl_dict];};freshtab1;{[err]err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_mul;`fresh;`class;sbl_dict];};freshtab1;{[err]err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;sbl_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;sbl_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_mul;`fresh;`class;sbl_dict];};freshtab1;{[err]0N!err;0b}];1b;0b]
 
 $[(::)~@[{.automl.run[x;tgt_f  ;`fresh;`reg  ;`saveopt`aggcols!(0;`x1)];};freshtab1;{[err]err;0b}];1b;0b]
 $[(::)~@[{.automl.run[x;tgt_b  ;`fresh;`class;`hp`trials`hld`tts!(`random;10;.3;`.ml.traintestsplit)];};freshtab1;{[err]err;0b}];1b;0b]

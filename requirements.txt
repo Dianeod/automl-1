@@ -5,4 +5,3 @@ numpy
 statsmodels
 scikit-learn
 pandas>=1.0
-gensim==3.8.1
