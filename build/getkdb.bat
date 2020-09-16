@@ -1,4 +1,4 @@
-conda install -c kx/label/dev embedpy
+conda install -c kx/label/dev embedpy=1.3.5
 mkdir q
 xcopy /E C:\Miniconda3-x64\q q
 echo|set /P =%QLIC_KC% >q\kc.lic.enc
