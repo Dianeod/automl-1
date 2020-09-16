@@ -16,11 +16,6 @@ set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
 conda config --set always_yes yes --set changeps1 no
 call "build\getkdb.bat" || goto :error
 
-mkdir embedpy
-cd embedpy
-echo getembedpy"latest" | q ..\build\getembedpy.q -q || goto :error
-cd ..
-echo p)print('embedpy runs') | q -q || goto :error
 exit /b 0
 
 :error
