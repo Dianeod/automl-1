@@ -10,9 +10,11 @@ perl -p -i.bak -e s/AUTOMLVERSION/`\$\"%AUTOML_VERSION%\"/g automl.q
 if not defined QLIC_KC (
  goto :nokdb
 )
-call "build\getkdb.bat" || goto :error
+
 
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+call "build\getkdb.bat" || goto :error
+
 mkdir embedpy
 cd embedpy
 echo getembedpy"latest" | q ..\build\getembedpy.q -q || goto :error
