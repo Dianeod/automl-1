@@ -17,9 +17,9 @@ tgt_mul:100?3
 
 normtab1:([]100?1f;100?0b;asc 100?`1;100?100)
 
-$[(::)~@[{.automl.run[x;tgt_f  ;`normal;`reg  ;::];};normtab1;{[err]0N!err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_b  ;`normal;`class;::];};normtab1;{[err]0N!err;0b}];1b;0b]
-$[(::)~@[{.automl.run[x;tgt_mul;`normal;`class;::];};normtab1;{[err]0N!err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_f  ;`normal;`reg  ;::];};normtab1;{[err]err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_b  ;`normal;`class;::];};normtab1;{[err]err;0b}];1b;0b]
+$[(::)~@[{.automl.run[x;tgt_mul;`normal;`class;::];};normtab1;{[err]err;0b}];1b;0b]
 
 $[(::)~@[{.automl.run[x;tgt_f  ;`normal;`reg  ;norm];};normtab1;{[err]err;0b}];1b;0b]
 $[(::)~@[{.automl.run[x;tgt_b  ;`normal;`class;norm];};normtab1;{[err]err;0b}];1b;0b]
