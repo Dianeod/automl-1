@@ -13,6 +13,7 @@ if not defined QLIC_KC (
 
 
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+conda config --set always_yes yes --set changeps1 no
 call "build\getkdb.bat" || goto :error
 
 mkdir embedpy
