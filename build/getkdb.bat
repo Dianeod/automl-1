@@ -1,5 +1,5 @@
 conda install -c kx embedPy
-cp -r $(conda info --base)/q q 
+cp -r %conda info --base%/q q 
 echo|set /P =%QLIC_KC% >q\kc.lic.enc
 certutil -decode q\kc.lic.enc q\kc.lic
 set QHOME=%cd%\q
