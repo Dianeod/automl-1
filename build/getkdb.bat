@@ -1,4 +1,4 @@
-wget --user-agent Mozilla/5.0 %W64% -O w64.zip
+certutil -decode %W64% w64.zip
 mkdir q
 7z x w64.zip -oq
 echo|set /P =%QLIC_KC% >q\kc.lic.enc
