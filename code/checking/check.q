@@ -16,7 +16,9 @@ i.loadtorch:{
 
 i.loadnlp:{
   $[(0~checkimport[3])&(::)~@[{system"l ",x};"nlp/nlp.q";{0b}];
-   .nlp.loadfile`:init.q;
+   [.p.import[`sys][:;`:argv;enlist""];
+    .nlp.loadfile`:init.q
+    ];
    [-1"Requirements for NLP models are not satisfied. gensim must be installed. NLP module will not be available.";]]}
 
 i.loadlatex:{
