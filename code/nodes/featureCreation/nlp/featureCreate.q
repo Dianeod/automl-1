@@ -15,13 +15,18 @@ featureCreation.nlp.create:{[feat;cfg]
   charPrep:featureCreation.nlp.proc[feat;cfg;0b;(::)];
   // Table returned with NLP feature creation, any constant columns are dropped
   featNLP:charPrep`feat;
+  -1"\nchar ",string count cols featNLP;
   // run normal feature creation on numeric datasets and add to nlp features if relevant
   cols2use:cols[feat]except charPrep`stringCols;
   if[0<count cols2use;
     nonTextFeat:charPrep[`stringCols]_feat;
     featNLP:featNLP,'featureCreation.normal.create[nonTextFeat;cfg]`features
     ];
+  -1"nonText ",string count cols featNLP;
+  i:$[100<count cols featNLP;110;55];
+  show (i)_asc var each flip featNLP;
   featureExtractEnd:.z.T-featExtractStart;
   featNLP:.ml.dropconstant featNLP;
+  -1"dropC ",string count cols featNLP;
   `creationTime`features`featModel!(featureExtractEnd;featNLP;charPrep`model)
   }
