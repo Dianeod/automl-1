@@ -8,5 +8,5 @@ if defined QLIC_KC (
 	pip install gensim
         curl -fsSL -o test.q https://github.com/KxSystems/embedpy/raw/master/test.q
 	env:PYTHONHASHSEED=0
-        q test.q code/nodes/featureCreation/ -q
+        q test.q code/nodes/featureCreation/tests -q
 )
