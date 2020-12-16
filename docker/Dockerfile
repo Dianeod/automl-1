@@ -40,7 +40,8 @@ USER kx
 
 RUN . /opt/conda/etc/profile.d/conda.sh \
 	&& conda activate kx \
-	&& conda install --file /opt/kx/ml/requirements.txt \
+        && pip install pip==9.0.1 \
+	&& pip install -r /opt/kx/ml/requirements.txt \
 	&& conda install --file /opt/kx/automl/requirements.txt \
 	&& conda clean -y --all 
 
