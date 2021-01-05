@@ -41,7 +41,6 @@ USER kx
 RUN . /opt/conda/etc/profile.d/conda.sh \
     && conda activate kx \
     && pip install pip==9.0.1 \
-    && pip install cython \
     && pip install -r /opt/kx/ml/requirements.txt \
     && conda install --file /opt/kx/automl/requirements.txt \
     && conda clean -y --all 

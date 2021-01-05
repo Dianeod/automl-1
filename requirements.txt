@@ -1,3 +1,4 @@
+cython
 reportlab
 joblib
 matplotlib
