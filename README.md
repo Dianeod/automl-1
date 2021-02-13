@@ -1,7 +1,6 @@
 # Automated machine learning in kdb+
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kxsystems/automl)](https://github.com/kxsystems/automl/releases) [![Travis (.org) branch](https://img.shields.io/travis/kxsystems/automl/master?label=travis%20build)](https://travis-ci.org/kxsystems/automl/branches)
-
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kxsystems/automl)](https://github.com/kxsystems/automl/releases) [![Build Status](https://travis-ci.com/KxSystems/automl.svg?branch=master)](https://travis-ci.com/KxSystems/automl)
 ## Introduction
 
 The automated machine learning library described here is built largely on the tools available within the machine learning toolkit available [here](https://github.com/kxsystems/ml). The purpose of this framework is to provide users with the ability to automate the process of applying machine learning techniques to real-world problems. In the absence of expert machine learning engineers this handles the following processes within a traditional workflow.
@@ -18,6 +17,7 @@ At present the machine learning frameworks supported for this are based on:
 
 1. One-to-one feature to target non time-series
 2. FRESH based feature extraction and model production
+3. NLP-based feature creation and word2vec transformation.
 
 The problems which can be solved by this framework will be expanded over time as will the available functionality.
 
@@ -40,7 +40,40 @@ or via conda:
 conda install --file requirements.txt
 ```
 
-**Note**: Tensorflow and Keras are required for the application of the deep learning models within this platform. However given the large memory requirements of tensorflow the platform will operate without tensorflow by not running the deep learning models. In order to access the full functionality of the interface keras and tensorflow will need to be installed separately by a user.
+### Optional requirements for advanced modules
+
+The above requirements allow users to access the base functionality provided within AutoML. Additional modules are available - including Sobol sequence hyperparameter search, LaTeX report generation and Keras, PyTorch and NLP models. However, given the large memory requirement for the dependencies of these modules, they are not included in the base functionality and must be installed by the user themself.
+
+**Sobol search** - via pip (see package details [here](https://pypi.org/project/sobol-seq/)):
+```bash
+sobol-seq
+```
+
+**LaTeX** - via conda or pip:
+```bash
+pylatex
+```
+
+**Keras** - via conda or pip:
+```bash
+keras
+tensorflow
+```
+
+**PyTorch** - via conda or pip:
+```bash
+torch
+```
+
+**Theano** - via conda or pip:
+```bash
+theano
+```
+
+**NLP**
+
+The NLP functionality contained within AutoML requires the [Kx NLP library](https://github.com/KxSystems/nlp) along with `gensim` which can be installed using conda or pip.
+
 
 ## Installation
 
